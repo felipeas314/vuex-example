@@ -15,7 +15,7 @@ const loginSucess = (state) => {
   state.isLogin = true;
   // state.token = null;
   // state.user = null;
-},
+}
 
 const loginFailure = (state) => {
   state.isLogin = false

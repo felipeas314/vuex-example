@@ -1,23 +1,23 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import { login } from './login.module';
-import countModule from './count';
+// import { login } from './login.module';
+import login from './login';
+import count from './count';
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   modules: {
     login,
-    count: countModule
+    count
   },
   state: {
-    value_exemplate: []
+    value_exemple: 'Test vuex'
   },
   mutations: {
-    teste: state => {
-      console.log(state);
-      console.log('value: ',state.value_exemplate);
+    test: state => {
+      console.log('value: ',state.value_exemple);
     }
   }
 });

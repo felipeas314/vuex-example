@@ -1,4 +1,5 @@
 const INCREASE = (state) => {
+  console.log('Mutation INCREASE');
   state.value = state.value + 1;
 };
 
