@@ -63,7 +63,7 @@
             ...mapActions('login', {
                 login: 'login'
             }),
-                reset() {
+            reset() {
                 this.$refs.form.reset();
             },
             doLogin() {

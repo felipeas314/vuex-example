@@ -7,10 +7,17 @@ const state = {
   user: null
 }
 
+const getters = {
+  USER: state => {
+    console.log('getter');
+    return state.user;
+  }
+}
+
 const actions = {
   login({commit}, {username,password}){
     commit('loginRequest',{username});
-
+    console.log('username: ',username);
     let result = loginService.login(username,password);
     if(result){
       commit('loginSucess');
@@ -34,14 +41,15 @@ const mutations = {
     state.user = null;
   },
   loginRequest(state,user){
+    console.log('user:',user);
     state.isLogin = true;
     state.token = null;
-    state.user = user;
+    state.user = user.username;
   },
   loginSucess(state){
     state.isLogin = true;
-    state.token = null;
-    state.user = null;
+    // state.token = null;
+    // state.user = null;
   },
   loginFailure(state){
     state.isLogin = false
@@ -51,6 +59,7 @@ const mutations = {
 export const login = {
   namespaced: true,
   state,
+  getters,
   actions,
   mutations
 };
