@@ -7,13 +7,13 @@ const resetState = (state) => {
 const loginRequest = (state, user) => {
   console.log('user:', user);
   state.isLogin = true;
-  state.token = null;
+  state.token = 'wqnnK!jn78qwhe*&Whe1';
   state.user = user.username;
 }
 
 const loginSucess = (state) => {
   state.isLogin = true;
-  // state.token = null;
+  state.token = 'wqnnK!jn78qwhe*&Whe1';
   // state.user = null;
 }
 

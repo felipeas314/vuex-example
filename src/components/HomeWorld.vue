@@ -26,6 +26,7 @@
     created(){
       console.log('mapGetters: ',this.user);
       console.log('mapState: ',this.name);
+      console.log('Token: ',this.$store.state.login.token);
       this.$store.commit('test');
     },
     computed : {
